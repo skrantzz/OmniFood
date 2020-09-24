@@ -134,9 +134,9 @@ h2:after {
 }
 
 .icon-small {
-  display: inline-block;
+  /* display: inline-block; */
   width: 30px;
-  text-align: center;
+  /* text-align: center; */
   color: #ff3043;
   margin-right: 10px;
 
@@ -144,6 +144,10 @@ h2:after {
   line-height: 120%;
   /* vertical-align: middle; */
   margin-bottom: -2px;
+}
+
+.icon-checkmark {
+  background-color: #ff3043 !important;
 }
 
 /* --------- BUTTONS ----------- */
@@ -185,7 +189,7 @@ a:active {
 
 .btn-ghost:link,
 .btn-ghost:visited {
-  border: 1px solid white;
+  border: 1px solid #f0932b;
   border-radius: 2px;
   color: #f0932b;
   border-radius: 100px;
@@ -285,7 +289,7 @@ a:active {
 /* ---------------------------------------------------- */
 
 .section-steps {
-  background-color: rgb(243, 240, 240);
+  background-color: #eeeeee;
 }
 
 .steps-box:first-child {
@@ -327,7 +331,6 @@ a:active {
 .btn-app:link,
 .btn-app:visited {
   border: 0;
-
 }
 
 .btn-app img {
@@ -354,7 +357,8 @@ a:active {
 /* ---------------------------------------------------- */
 
 .section-testimonials {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../resources/img/back-customers.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../../resources/img/back-customers.jpg");
   background-size: cover;
   color: white;
   background-attachment: fixed;
@@ -365,7 +369,7 @@ blockquote {
   font-style: italic;
   line-height: 145%;
   position: relative;
-  margin-top: 40px
+  margin-top: 40px;
 }
 
 blockquote:before {
@@ -383,7 +387,6 @@ cite {
   display: block;
 }
 
-
 cite img {
   height: 45px;
   border-radius: 50%;
@@ -391,3 +394,60 @@ cite img {
   vertical-align: middle;
 }
 
+/* ---------------------------------------------------- */
+/*                SIGN UP/PLANS */
+/* ---------------------------------------------------- */
+
+.section-plans {
+  background-color: #eeeeee;
+}
+
+.plan-box {
+  background-color: white;
+  border-radius: 5px;
+  width: 90%;
+  margin-left: 5%;
+  
+}
+
+.plan-box div {
+  padding: 15px;
+  border-bottom: 1px solid rgb(230, 230, 230)
+}
+
+.plan-box div:first-child {
+  background-color: rgb(249, 249, 249)
+}
+.plan-box div:last-child {
+  text-align: center;
+  border: 0;
+}
+
+.plan-price {
+  font-size: 300%;
+  margin-bottom: 10px;
+  font-weight: 200;
+  color: #f0932b
+}
+
+.plan-price span {
+  font-size: 40%;
+  font-weight: 300;
+}
+
+.plan-price-meal {
+  font-size: 80%
+}
+
+.plan-box ul {
+  list-style: none;
+}
+
+.plan-box ul li {
+  padding: 5px 0;
+}
+
+.plan-box ul li span {
+  text-decoration: line-through;
+  text-decoration-color: #ff3043;
+}
