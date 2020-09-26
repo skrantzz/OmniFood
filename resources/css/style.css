@@ -170,7 +170,8 @@ a:active {
 /* --------- BUTTONS ----------- */
 
 .btn:link,
-.btn:visited {
+.btn:visited,
+input[type="submit"] {
   display: inline-block;
   padding: 10px 30px;
   margin-right: 10px;
@@ -181,7 +182,8 @@ a:active {
 }
 
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type="submit"] {
   background-color: #f0932b;
   border: 1px solid #f0932b;
   border-radius: 100px;
@@ -196,7 +198,9 @@ a:active {
 }
 
 .btn:hover,
-.btn:active {
+.btn:active,
+input[type="submit"]:hover,
+  input[type="submit"]:active {
   background-color: #ff3043;
 }
 
@@ -407,16 +411,18 @@ cite img {
   border-radius: 5px;
   width: 90%;
   margin-left: 5%;
-  
+  box-shadow: 0 3px 2px #e6e6e6;
 }
 
 .plan-box div {
   padding: 15px;
-  border-bottom: 1px solid rgb(230, 230, 230)
+  border-bottom: 1px solid rgb(230, 230, 230);
 }
 
 .plan-box div:first-child {
-  background-color: rgb(249, 249, 249)
+  background-color: rgb(249, 249, 249);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .plan-box div:last-child {
   text-align: center;
@@ -427,7 +433,7 @@ cite img {
   font-size: 300%;
   margin-bottom: 10px;
   font-weight: 200;
-  color: #f0932b
+  color: #f0932b;
 }
 
 .plan-price span {
@@ -436,7 +442,7 @@ cite img {
 }
 
 .plan-price-meal {
-  font-size: 80%
+  font-size: 80%;
 }
 
 .plan-box ul {
@@ -451,3 +457,100 @@ cite img {
   text-decoration: line-through;
   text-decoration-color: #ff3043;
 }
+
+/* ---------------------------------------------------- */
+/*                CONTACT FORM */
+/* ---------------------------------------------------- */
+
+.contact-form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+  width: 100%;
+  padding: 7px;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type=checkbox] {
+  margin: 10px 5px 10px 0;
+}
+
+/* ---------------------------------------------------- */
+/*                FOOTER */
+/* ---------------------------------------------------- */
+
+footer {
+  background-color: #282017;
+  padding: 20px;
+  font-size: 85%;
+}
+
+.footer-nav {
+  list-style: none;
+  float: left;
+}
+
+.social-icons {
+  list-style: none;
+  float: right;
+}
+
+.footer-nav li,
+.social-icons li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-icons li:last-child {
+  margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-icons li a:link,
+.social-icons li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+  color: #ff3043;
+}
+
+.social-icons li a:link,
+.social-icons li a:visited {
+  font-size: 150%;
+}
+
+ion-icon {
+  transition: color 0.2s;
+}
+ion-icon[name=logo-facebook]:hover {
+  color: #3b5998
+}
+ion-icon[name=logo-twitter]:hover {
+  color: #00aced;
+}
+ion-icon[name=logo-instagram]:hover {
+  color: #517fa4;
+}
+
+footer p {
+  color: rgb(104, 103, 103);
+  text-align: center;
+  font-size: 90%;
+  margin-top: 50px
+}
+
