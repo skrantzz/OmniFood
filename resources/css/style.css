@@ -1,3 +1,5 @@
+
+
 /* colors: 
 orange: #f0932b
 pink: #ff3043 */
@@ -8,15 +10,18 @@ pink: #ff3043 */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
+html,
 body {
   color: rgb(72, 72, 72);
   font-family: "Lato", sans-serif;
   font-size: 20px;
   font-weight: 300;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 .clearfix {
@@ -35,6 +40,10 @@ body {
 /* ---------------------------------------------------- */
 
 header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))),
+    url("../img/hero.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../img/hero.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../img/hero.jpg");
   background-size: cover;
@@ -48,7 +57,9 @@ header {
   width: 1140px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 /* ---------------------------------------------------- */
@@ -158,6 +169,8 @@ a:visited {
   color: #ff3043;
   padding-bottom: 1px;
   border-bottom: 1px solid #ff3043;
+  -webkit-transition: border-bottom 0.2s, color 0.2s;
+  -o-transition: border-bottom 0.2s, color 0.2s;
   transition: border-bottom 0.2s, color 0.2s;
 }
 
@@ -178,6 +191,8 @@ input[type="submit"] {
   font-weight: 300;
   text-decoration: none;
   color: white;
+  -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+  -o-transition: background-color 0.2s, border 0.2s, color 0.2s;
   transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 
@@ -200,7 +215,7 @@ input[type="submit"] {
 .btn:hover,
 .btn:active,
 input[type="submit"]:hover,
-  input[type="submit"]:active {
+input[type="submit"]:active {
   background-color: #ff3043;
 }
 
@@ -211,6 +226,15 @@ input[type="submit"]:hover,
   width: auto;
   float: left;
   margin-top: 15px;
+}
+
+.logo-black {
+  display: none;
+  height: 50px;
+  width: auto;
+  float: left;
+  margin: 5px 0;
+  
 }
 
 .main-nav {
@@ -231,14 +255,39 @@ input[type="submit"]:hover,
   text-decoration: none;
   text-transform: uppercase;
   font-size: 80%;
-  border-top: 2px solid transparent;
-  transition: border-top 0.2s;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: border-bottom 0.2s;
+  -o-transition: border-bottom 0.2s;
+  transition: border-bottom 0.2s;
 }
 
 .main-nav li a:hover,
 .main-nav li a:active {
-  border-top: 2px solid #ff3043;
+  border-bottom: 2px solid #ff3043;
 }
+
+  /* -----------------sticky nav-------------------- */
+
+  .sticky {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     background-color: rgba(255, 255, 255, 0.92);
+     box-shadow: 0 2px 2px rgb(223, 223, 223);
+     z-index: 9999;
+  }
+
+  .sticky .main-nav { margin-top: 18px; }
+
+  .sticky .main-nav li a:link,
+  .sticky .main-nav li a:visited {
+  padding: 17px 0;
+  color: #555;
+}
+
+  .sticky .logo { display: none }  
+  .sticky .logo-black { display: block; }
 /* ---------------------------------------------------- */
 /*                      FEATURES */
 /* ---------------------------------------------------- */
@@ -278,13 +327,21 @@ input[type="submit"]:hover,
 .meal-photo img {
   width: 100%;
   height: auto;
-  transform: scale(1.15);
+  -webkit-transform: scale(1.15);
+      -ms-transform: scale(1.15);
+          transform: scale(1.15);
   opacity: 0.7;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  -o-transition: transform 0.5s, opacity 0.5s;
   transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
 }
 
 .meal-photo img:hover {
-  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+      -ms-transform: scale(1.03);
+          transform: scale(1.03);
   opacity: 1;
 }
 
@@ -361,6 +418,10 @@ input[type="submit"]:hover,
 /* ---------------------------------------------------- */
 
 .section-testimonials {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))),
+    url("../../resources/img/back-customers.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../../resources/img/back-customers.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("../../resources/img/back-customers.jpg");
   background-size: cover;
@@ -411,7 +472,8 @@ cite img {
   border-radius: 5px;
   width: 90%;
   margin-left: 5%;
-  box-shadow: 0 3px 2px #e6e6e6;
+  -webkit-box-shadow: 0 3px 2px #e6e6e6;
+          box-shadow: 0 3px 2px #e6e6e6;
 }
 
 .plan-box div {
@@ -455,7 +517,8 @@ cite img {
 
 .plan-box ul li span {
   text-decoration: line-through;
-  text-decoration-color: #ff3043;
+  -webkit-text-decoration-color: #ff3043;
+          text-decoration-color: #ff3043;
 }
 
 /* ---------------------------------------------------- */
@@ -467,8 +530,8 @@ cite img {
   margin: 0 auto;
 }
 
-input[type=text],
-input[type=email],
+input[type="text"],
+input[type="email"],
 select,
 textarea {
   width: 100%;
@@ -479,7 +542,7 @@ textarea {
   height: 100px;
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
   margin: 10px 5px 10px 0;
 }
 
@@ -518,10 +581,12 @@ footer {
 .footer-nav li a:visited,
 .social-icons li a:link,
 .social-icons li a:visited {
-    text-decoration: none;
-    border: 0;
-    color: #888;
-    transition: color 0.2s;
+  text-decoration: none;
+  border: 0;
+  color: #888;
+  -webkit-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s;
 }
 
 .footer-nav li a:hover,
@@ -535,15 +600,17 @@ footer {
 }
 
 ion-icon {
+  -webkit-transition: color 0.2s;
+  -o-transition: color 0.2s;
   transition: color 0.2s;
 }
-ion-icon[name=logo-facebook]:hover {
-  color: #3b5998
+ion-icon[name="logo-facebook"]:hover {
+  color: #3b5998;
 }
-ion-icon[name=logo-twitter]:hover {
+ion-icon[name="logo-twitter"]:hover {
   color: #00aced;
 }
-ion-icon[name=logo-instagram]:hover {
+ion-icon[name="logo-instagram"]:hover {
   color: #517fa4;
 }
 
@@ -551,6 +618,5 @@ footer p {
   color: rgb(104, 103, 103);
   text-align: center;
   font-size: 90%;
-  margin-top: 50px
+  margin-top: 50px;
 }
-
