@@ -1,6 +1,6 @@
 # OmniFood
 
-**This is a mock front-end project**
+*This is a mock front-end project*
 
 Omnifood is a premium food delivery service with the mission to bring affordable and healthy meals as to many people as possible. 
 
